@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f5f5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login {
+  background-color: #f5f5f5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login ul {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.login ul li::after {
+  content: "|";
+  width: 1px;
+  height: 100%;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.login ul li:last-child::after {
+  content: "";
+}
+
+.login ul li {
+  font-size: 12px;
+  font-weight: 800;
+  color: #444;
+  cursor: pointer;
+}
+
+.login ul li:hover {
+  color: #888;
+}
+
+.login ul li:hover::after {
+  color: #444;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* border-bottom: 1px solid red; */
+  padding: 0 30px;
+  background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.nav img {
+  width: 70px;
+  height: 60px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav img:hover {
+  opacity: 0.5;
+}
+
+.gnb-list {
+  position: relative;
+  display: flex;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.gnb-list li {
+  padding: 0 10px;
+}
+
+.gnb-list li:hover::after {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 0;
+  /* transform: rotate(90deg); */
+  border: 1px solid #000;
+}
+
+.icon-list {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  position: relative;
+  margin-right: 20px;
+}
+
+.search-box span {
+  position: absolute;
+  left: 1px;
+  top: 3px;
+  font-size: 18px;
+  border-radius: 100px;
+  /* border: 1px solid red; */
+  padding: 6px 11px 6px 11px;
+  background-color: transparent;
+}
+
+.search-box input {
+  width: 200px;
+  border: none;
+  border-radius: 50px;
+  background-color: #f5f5f5;
+  /* padding: 10px 0px 10px 50px; */
+  font-size: 17px;
+  font-weight: 800;
+
+  color: inherit;
+  padding: 8px 48px;
+  cursor: text;
+}
+
+.search-box input::placeholder {
+  font-weight: 800;
+  color: #cccccc;
+}
+
+.search-box input:hover {
+  background-color: #eeeeee;
+}
+
+.search-box input:hover::placeholder {
+  color: #999;
+}
+
+.second-icon-box span {
+  font-size: 20px;
+  padding: 7px 9px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.second-icon-box span:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.search-box span:hover {
+  cursor: pointer;
+  background-color: #e2e2e2;
+}
+
+/* 카드부분 */
+.card {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+
+  width: 400px;
+  border: 1px solid red;
+}
+.card div {
+  padding-bottom: 4px;
+}
+
+.card img {
+  width: 398px;
+  /* border: 1px solid blue; */
+  margin-bottom: 8px;
+}
+
+.best {
+  color: rgb(187, 40, 14);
+}
+
+.name {
+  font-size: 15px;
+}
+
+.price,
+.new {
+  font-size: 14px;
+  color: #999999;
+  font-weight: 800;
 }
